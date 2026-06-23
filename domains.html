@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Domains & Industry Solutions | Yelagiri Infotech</title>
+    <meta name="description" content="Yelagiri Infotech designs specialized software solutions across four core domains: Retail Systems, procurement Bidding Platforms, Field Services tracking, and Objective Education Assessment.">
+    <meta name="keywords" content="omnichannel retail software, bidding system algorithms, procurement platform engineering, field dispatch systems, education assessment software, objective testing platforms, dynamic pricing software">
+    
+    <meta property="og:title" content="Target Domains & Industry Solutions | Yelagiri Infotech">
+    <meta property="og:description" content="Tailored enterprise software. Discover our deep expertise in Retail logistics, dynamic Bidding systems, Field Services routing, and objective Education Assessment engines.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yelagiriinfotech.com/domains.html">
+    <meta property="og:image" content="assets/yelagiri-infotech-logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle canvas background -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <div class="blur-orb orb-primary"></div>
+    <div class="blur-orb orb-secondary"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="header-nav" id="mainHeader">
+        <a href="index.html" class="logo" id="headerLogo">
+            <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
+        </a>
+        <nav style="display: flex; align-items: center;">
+            <ul class="nav-links" id="navLinksList">
+                <li><a href="index.html" id="navHome" data-i18n="navHome">Home</a></li>
+                <li><a href="services.html" id="navServices" data-i18n="navServices">Services</a></li>
+                <li><a href="domains.html" id="navDomains" class="active" data-i18n="navDomains">Domains</a></li>
+                <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
+                <li><a href="contact.html" id="navContact" class="nav-cta" data-i18n="navContact">Consultation</a></li>
+            </ul>
+            <div class="lang-selector-wrapper" id="headerLangWrapper">
+                <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                </select>
+            </div>
+        </nav>
+        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section" style="padding-top: 140px; padding-bottom: 40px;">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge" id="domainsBadge" data-i18n="domainsHeadBadge">Industry Verticals</div>
+                    <h1 class="section-title gradient-text" style="font-size: 3.2rem;" data-i18n="domainsHeadTitle">Sectors We Empower</h1>
+                    <p data-i18n="domainsHeadDesc">Generic tools don't solve complex industry problems. We develop software tailored for specific domain rules, data structures, and regulatory environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domain Grid Section -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="domain-grid" id="domainSectionsGrid">
+                    
+                    <!-- Domain: Retail -->
+                    <div class="domain-card" id="retail">
+                        <div class="domain-img-box">
+                            <img src="assets/domain_sectors.png" alt="Retail inventory database sync and POS terminal mapping illustration" id="imgDomainRetail">
+                            <div class="domain-overlay">Retail & E-commerce</div>
+                        </div>
+                        <div class="domain-body">
+                            <h3 data-i18n="domTitle1">Omnichannel Retail & Intelligent Supply Chain</h3>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc1_1">
+                                Modern retailers operate across physical stores, mobile apps, and third-party marketplaces. Keeping inventory and pricing synced across all these channels is a common operational hurdle.
+                            </p>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc1_2">
+                                Yelagiri Infotech builds secure, high-throughput retail networks that process real-time sales data across millions of stock units. We deploy smart pricing engines that analyze customer interest, supply levels, and shipping times to adjust promotions dynamically. Our systems sync inventory pools instantly, avoiding double-sales and helping warehouse teams prepare orders quickly.
+                            </p>
+                            <p style="font-weight: 500; color: var(--color-primary); font-size: 0.95rem;" data-i18n="domTech1">
+                                Key Technologies: Event-driven pub/sub messaging, distributed stock ledgers, predictive demand algorithms, and custom Point of Sale (POS) API wrappers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Domain: Bidding -->
+                    <div class="domain-card" id="bidding">
+                        <div class="domain-img-box">
+                            <img src="assets/domain_sectors.png" alt="Bidding analytics bid charts and audit trail log visualization" id="imgDomainBidding">
+                            <div class="domain-overlay">Procurement & Bidding</div>
+                        </div>
+                        <div class="domain-body">
+                            <h3 data-i18n="domTitle2">Transparent Procurement & Dynamic Bidding</h3>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc2_1">
+                                Large-scale industrial procurement requires high transparency, auditability, and speed. Manual cost estimations and slow bidding portals can lead to project delays and budget overruns.
+                            </p>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc2_2">
+                                We engineer secure, multi-criteria bidding platforms that automate vendor evaluations. Our systems process incoming proposals, parse pricing line items, and run compliance checks using objective criteria. With secure audit logging and cryptographic verification, we prevent tampering, ensuring fair competition and reliable vendor selections for enterprise buyers.
+                            </p>
+                            <p style="font-weight: 500; color: var(--color-primary); font-size: 0.95rem;" data-i18n="domTech2">
+                                Key Technologies: Secure cryptographic hashing, automated document parsing pipelines, multi-criteria auction algorithms, and real-time WebSocket bidding tickers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Domain: Field Services -->
+                    <div class="domain-card" id="field">
+                        <div class="domain-img-box">
+                            <img src="assets/domain_sectors.png" alt="Field technician dispatcher GPS routing overlay map illustration" id="imgDomainField">
+                            <div class="domain-overlay">Field Operations</div>
+                        </div>
+                        <div class="domain-body">
+                            <h3 data-i18n="domTitle3">Distributed Field Service Operations</h3>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc3_1">
+                                Managing complex field operations—like utilities repair, industrial installs, and home maintenance—requires quick dispatch coordination and reliable mobile data management.
+                            </p>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc3_2">
+                                Our field service systems combine dispatcher dashboards with lightweight mobile applications for field crews. Dispatchers benefit from auto-scheduling tools that match travel routes and job priority with technician skills. Field technicians can access technical manuals, check inventory levels, and sign off on completed work without internet connectivity, syncing updates automatically once reconnected.
+                            </p>
+                            <p style="font-weight: 500; color: var(--color-primary); font-size: 0.95rem;" data-i18n="domTech3">
+                                Key Technologies: GPS tracking API integrations, offline-first client storage (IndexedDB/SQLite), and auto-allocation engines based on technician qualifications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Domain: Education Assessment -->
+                    <div class="domain-card" id="education">
+                        <div class="domain-img-box">
+                            <img src="assets/domain_sectors.png" alt="Education evaluation scoring grid and performance matrix illustration" id="imgDomainEdu">
+                            <div class="domain-overlay">Education</div>
+                        </div>
+                        <div class="domain-body">
+                            <h3 data-i18n="domTitle4">Objective Education Assessment & Evaluation</h3>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc4_1">
+                                Traditional educational grading systems can be subjective and slow, limiting the feedback loop between teaching and learning. Assessing specific student skills at scale requires structured, data-driven tools.
+                            </p>
+                            <p style="margin-bottom: 1.2rem;" data-i18n="domDesc4_2">
+                                Yelagiri Infotech designs and builds objective assessment engines used by schools, universities, and professional licensing boards. Our software structures evaluations based on clear learning goals (aligned with frameworks like Bloom's Taxonomy). The platform offers automated, secure exam delivery, cheat-prevention features, and analytics dashboards that pinpoint learning gaps for teachers and curriculum designers.
+                            </p>
+                            <p style="font-weight: 500; color: var(--color-primary); font-size: 0.95rem;" data-i18n="domTech4">
+                                Key Technologies: Adaptive testing algorithms, Bloom's Taxonomy learning classifiers, secure lock-down test environments, and learning analytics pipelines.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-sec" id="domainsCtaSec">
+            <div class="container">
+                <div class="cta-box">
+                    <h2 class="cta-title gradient-text" data-i18n="domainsCtaTitle">Have a Unique Domain Requirement?</h2>
+                    <p class="cta-desc" data-i18n="domainsCtaDesc">
+                        Our engineering teams have experience building custom platforms across regulated industries. Share your workflows, and we will outline a custom software approach.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary" id="domainsCtaBtn" data-i18n="domainsCtaBtn">Consult with a Domain Expert</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="mainFooter">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-desc">
+                    <a href="index.html" class="logo" id="footerLogo">
+                        <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="footerLogoImg">
+                    </a>
+                    <p class="footer-desc" data-i18n="footerDesc">
+                        Providing premier custom software development, IT consulting, and secure AI engineering services. Helping enterprise organizations scale securely with technical excellence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footerServicesTitle">Engineering Services</h3>
+                    <ul class="footer-links" id="footerServicesLinks">
+                        <li><a href="services.html?tab=tab-erp" id="fLinkERP" data-i18n="optErp">Enterprise ERP Systems</a></li>
+                        <li><a href="services.html?tab=tab-field" id="fLinkField" data-i18n="optField">Field Services Software</a></li>
+                        <li><a href="services.html?tab=tab-strategy" id="fLinkStrategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
+                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platform</a></li>
+                        <li><a href="services.html?tab=tab-llm" id="fLinkLlm" data-i18n="optLlm">LLM & Generative AI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footerDomainsTitle">Target Domains</h3>
+                    <ul class="footer-links" id="footerDomainsLinks">
+                        <li><a href="domains.html#retail" id="fLinkRetail">Omnichannel Retail</a></li>
+                        <li><a href="domains.html#bidding" id="fLinkBidding">Dynamic Bidding Platforms</a></li>
+                        <li><a href="domains.html#field" id="fLinkFieldSect">Field Workforce Operations</a></li>
+                        <li><a href="domains.html#education" id="fLinkEdu">Education & Objective Testing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footerNewsletterTitle">Stay Updated</h3>
+                    <p class="footer-newsletter-p" data-i18n="footerNewsletterP">Subscribe to our newsletter for insights on IT strategy and AI engineering trends.</p>
+                    <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Yelagiri Infotech insights!'); this.reset();">
+                        <input type="email" class="newsletter-input" data-i18n="footerNewsletterPlaceholder" placeholder="Enter business email" required aria-label="Business email address">
+                        <button type="submit" class="newsletter-btn" id="newsletterSubmit" data-i18n="footerNewsletterBtn">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech. All rights reserved. Built with technical excellence.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="socLinkedin" aria-label="Yelagiri Infotech LinkedIn profile">in</a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="socGithub" aria-label="Yelagiri Infotech GitHub workspace">git</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" id="socTwitter" aria-label="Yelagiri Infotech Twitter profile">x</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookieText">We use cookies to optimize system analysis, monitor transaction flows, and personalize your experience. By accepting, you consent to our privacy policies.</p>
+        </div>
+        <div class="cookie-btns">
+            <button class="cookie-btn cookie-btn-decline" id="cookieDeclineBtn" data-i18n="cookieDecline">Decline</button>
+            <button class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn" data-i18n="cookieAccept">Accept Consent</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

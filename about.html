@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Corporate Mission & Engineering Values | Yelagiri Infotech</title>
+    <meta name="description" content="Learn about Yelagiri Infotech's corporate values, engineering quality standards, and how we transform enterprises through custom AI integration and software engineering.">
+    <meta name="keywords" content="Yelagiri Infotech mission, corporate software engineers, AI system integrity, custom software engineering standards, professional software development India">
+    
+    <meta property="og:title" content="About Us | Corporate Mission & Engineering Values | Yelagiri Infotech">
+    <meta property="og:description" content="Discover our history, engineering principles, and why we are chosen by enterprise leaders seeking technical excellence and custom AI integrations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yelagiriinfotech.com/about.html">
+    <meta property="og:image" content="assets/yelagiri-infotech-logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle canvas background -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <div class="blur-orb orb-primary"></div>
+    <div class="blur-orb orb-secondary"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="header-nav" id="mainHeader">
+        <a href="index.html" class="logo" id="headerLogo">
+            <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
+        </a>
+        <nav style="display: flex; align-items: center;">
+            <ul class="nav-links" id="navLinksList">
+                <li><a href="index.html" id="navHome" data-i18n="navHome">Home</a></li>
+                <li><a href="services.html" id="navServices" data-i18n="navServices">Services</a></li>
+                <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
+                <li><a href="about.html" id="navAbout" class="active" data-i18n="navAbout">About Us</a></li>
+                <li><a href="contact.html" id="navContact" class="nav-cta" data-i18n="navContact">Consultation</a></li>
+            </ul>
+            <div class="lang-selector-wrapper" id="headerLangWrapper">
+                <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                </select>
+            </div>
+        </nav>
+        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section" style="padding-top: 140px; padding-bottom: 40px;">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge" id="aboutBadge" data-i18n="aboutHeadBadge">Our Identity</div>
+                    <h1 class="section-title gradient-text" style="font-size: 3.2rem;" data-i18n="aboutHeadTitle">Yelagiri Infotech</h1>
+                    <p data-i18n="aboutHeadDesc">Building high-performing, custom software foundations that support enterprise growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Detail Section -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="about-grid" style="grid-template-columns: 1.2fr 0.8fr; align-items: start; gap: 4rem;">
+                    <div>
+                        <h2 class="gradient-text" style="font-size: 2.2rem; margin-bottom: 1.5rem;" data-i18n="aboutMissionTitle">Our Mission: Transforming Business Through AI and Technical Excellence</h2>
+                        <p style="margin-bottom: 1.2rem;" data-i18n="aboutMissionDesc1">
+                            Founded on the principle that software should be treated as core company assets rather than temporary expenses, Yelagiri Infotech designs and builds high-quality software solutions. We partner with forward-thinking enterprises to modernize outdated systems and integrate secure, private artificial intelligence.
+                        </p>
+                        <p style="margin-bottom: 1.2rem;" data-i18n="aboutMissionDesc2">
+                            We avoid quick workarounds and generic software templates. Our engineers approach every challenge with fresh perspectives and deep technical knowledge. From our design practices to the final deployment steps, we build systems that handle millions of transactions, remain fully secure, and scale easily.
+                        </p>
+                        <h3 class="gradient-text" style="font-size: 1.6rem; margin-top: 2rem; margin-bottom: 1rem;" data-i18n="aboutIpTitle">IP Protection & Authentic Solutions</h3>
+                        <p style="margin-bottom: 1.2rem;" data-i18n="aboutIpDesc1">
+                            We believe that custom enterprise software must be truly unique. That is why Yelagiri Infotech guarantees complete originality across all source code, database structures, and written documentation we deliver.
+                        </p>
+                        <p style="margin-bottom: 1.2rem;" data-i18n="aboutIpDesc2">
+                            Every software architecture we design is built from the ground up to address your specific operational needs. We never copy code patterns from other projects or rely on third-party licenses that could expose your business to legal risks. When you partner with us, your custom platforms remain entirely your intellectual property.
+                        </p>
+                    </div>
+
+                    <!-- Side card -->
+                    <div class="glass-card" style="margin-top: 10px;">
+                        <h3 class="gradient-text" style="font-size: 1.4rem; margin-bottom: 1.5rem;" data-i18n="aboutPillarTitle">Core Operational Pillars</h3>
+                        <div class="about-features" style="gap: 1.5rem;">
+                            <div class="about-feat-item">
+                                <div class="about-feat-icon">✓</div>
+                                <div class="about-feat-text">
+                                    <h4 style="font-size: 1.05rem;" data-i18n="aboutPillarHead1">Bespoke Architectures</h4>
+                                    <p style="font-size: 0.9rem;" data-i18n="aboutPillarDesc1">Tailored designs optimized for your specific performance metrics, with no generic templates.</p>
+                                </div>
+                            </div>
+                            <div class="about-feat-item">
+                                <div class="about-feat-icon">✓</div>
+                                <div class="about-feat-text">
+                                    <h4 style="font-size: 1.05rem;" data-i18n="aboutPillarHead2">Complete IP Transfer</h4>
+                                    <p style="font-size: 0.9rem;" data-i18n="aboutPillarDesc2">Full ownership of custom source code transferred to your enterprise upon delivery.</p>
+                                </div>
+                            </div>
+                            <div class="about-feat-item">
+                                <div class="about-feat-icon">✓</div>
+                                <div class="about-feat-text">
+                                    <h4 style="font-size: 1.05rem;" data-i18n="aboutPillarHead3">Continuous QA Verification</h4>
+                                    <p style="font-size: 0.9rem;" data-i18n="aboutPillarDesc3">Continuous automated testing guarantees system speed and reliability at scale.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Standards Matrix -->
+        <section class="section" style="background: var(--bg-section-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge" data-i18n="aboutDevTitle">Standards</div>
+                    <h2 class="section-title gradient-text" data-i18n="aboutDevTitle">Our Development Quality Standards</h2>
+                    <p data-i18n="aboutDevDesc">We build systems that are designed to last, using reliable technologies and clear engineering processes.</p>
+                </div>
+                <div class="glass-grid">
+                    
+                    <div class="glass-card">
+                        <div class="card-icon">⚡</div>
+                        <h3 class="card-title" data-i18n="aboutCardTitle1">Performance Engineering</h3>
+                        <p class="card-desc" data-i18n="aboutCardDesc1">We design systems with low-latency APIs, optimized database queries, and caching structures to handle sudden traffic peaks without slowdowns.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3 class="card-title" data-i18n="aboutCardTitle2">Secure AI Deployments</h3>
+                        <p class="card-desc" data-i18n="aboutCardDesc2">We set up custom LLMs and RAG pipelines inside private virtual networks to ensure your proprietary company data remains secure.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3 class="card-title" data-i18n="aboutCardTitle3">Continuous QA Auditing</h3>
+                        <p class="card-desc" data-i18n="aboutCardDesc3">We integrate automated testing directly into the build pipeline, catching bugs early to maintain high system reliability.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="mainFooter">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-desc">
+                    <a href="index.html" class="logo" id="footerLogo">
+                        <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="footerLogoImg">
+                    </a>
+                    <p class="footer-desc" data-i18n="footerDesc">
+                        Providing premier custom software development, IT consulting, and secure AI engineering services. Helping enterprise organizations scale securely with technical excellence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footerServicesTitle">Engineering Services</h3>
+                    <ul class="footer-links" id="footerServicesLinks">
+                        <li><a href="services.html?tab=tab-erp" id="fLinkERP" data-i18n="optErp">Enterprise ERP Systems</a></li>
+                        <li><a href="services.html?tab=tab-field" id="fLinkField" data-i18n="optField">Field Services Software</a></li>
+                        <li><a href="services.html?tab=tab-strategy" id="fLinkStrategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
+                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platform</a></li>
+                        <li><a href="services.html?tab=tab-llm" id="fLinkLlm" data-i18n="optLlm">LLM & Generative AI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footerDomainsTitle">Target Domains</h3>
+                    <ul class="footer-links" id="footerDomainsLinks">
+                        <li><a href="domains.html#retail" id="fLinkRetail">Omnichannel Retail</a></li>
+                        <li><a href="domains.html#bidding" id="fLinkBidding">Dynamic Bidding Platforms</a></li>
+                        <li><a href="domains.html#field" id="fLinkFieldSect">Field Workforce Operations</a></li>
+                        <li><a href="domains.html#education" id="fLinkEdu">Education & Objective Testing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footerNewsletterTitle">Stay Updated</h3>
+                    <p class="footer-newsletter-p" data-i18n="footerNewsletterP">Subscribe to our newsletter for insights on IT strategy and AI engineering trends.</p>
+                    <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Yelagiri Infotech insights!'); this.reset();">
+                        <input type="email" class="newsletter-input" data-i18n="footerNewsletterPlaceholder" placeholder="Enter business email" required aria-label="Business email address">
+                        <button type="submit" class="newsletter-btn" id="newsletterSubmit" data-i18n="footerNewsletterBtn">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yelagiri Infotech. All rights reserved. Built with technical excellence.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="socLinkedin" aria-label="Yelagiri Infotech LinkedIn profile">in</a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="socGithub" aria-label="Yelagiri Infotech GitHub workspace">git</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" id="socTwitter" aria-label="Yelagiri Infotech Twitter profile">x</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookieText">We use cookies to optimize system analysis, monitor transaction flows, and personalize your experience. By accepting, you consent to our privacy policies.</p>
+        </div>
+        <div class="cookie-btns">
+            <button class="cookie-btn cookie-btn-decline" id="cookieDeclineBtn" data-i18n="cookieDecline">Decline</button>
+            <button class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn" data-i18n="cookieAccept">Accept Consent</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
