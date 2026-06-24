@@ -362,7 +362,7 @@ const translations = {
         addressBranchLabel: "Branch Office:",
 
         // HOME PAGE (index.html)
-        heroBadge: "Next-Gen Enterprise Architecture",
+        heroBadge: "Beyond Transactions: Building Engagement",
         heroTitle: "Engineering Intelligence. Building Products That Last.",
         heroDesc: "At Yelagiri Infotech, we build custom cloud solutions that solve complex operations. We deliver next-generation ecommerce systems, automated Field Services software, robust SAAS products, specialized mobile apps and tailored Large Language Model integrations to prepare your business for the cognitive era.",
         heroCtaPrimary: "Start Your Project",
@@ -569,7 +569,7 @@ const translations = {
         addressBranchLabel: "Succursale :",
 
         // HOME PAGE (index.html)
-        heroBadge: "Architecture d'entreprise de nouvelle génération",
+        heroBadge: "Au‑delà des transactions : créer l’engagement",
         heroTitle: "Ingénierie de l'intelligence. Créer des produits durables.",
         heroDesc: "Chez Yelagiri Infotech, nous construisons des solutions cloud sur mesure pour résoudre les opérations complexes. Nous fournissent des systèmes e-commerce de nouvelle génération, des logiciels automatisés de services sur le terrain, des produits SAAS robustes, des applications mobiles spécialisées et des intégrations de grands modèles de langage sur mesure pour préparer votre entreprise à l'ère cognitive.",
         heroCtaPrimary: "Démarrer votre projet",
@@ -776,7 +776,7 @@ const translations = {
         addressBranchLabel: "Sucursal:",
 
         // HOME PAGE (index.html)
-        heroBadge: "Arquitectura empresarial de última generación",
+        heroBadge: "Más allá de las transacciones: construyendo compromiso",
         heroTitle: "Ingeniería de Inteligencia. Desarrollando Productos Duraderos.",
         heroDesc: "En Yelagiri Infotech construimos soluciones en la nube personalizadas para optimizar operaciones complejas. Entregamos sistemas de comercio electrónico de última generación, software de servicios de campo automatizado, productos SAAS robustos, aplicaciones móviles especializadas e integraciones de modelos de lenguaje para preparar a su empresa para la era cognitiva.",
         heroCtaPrimary: "Comenzar Proyecto",
