@@ -9,21 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
     initCookieBanner();
 });
 
-/* --- Header Scroll Effect --- */
+/* --- HubSpot Header Sticky Scroll Trigger --- */
 function initHeader() {
-    const header = document.querySelector('.header-nav');
-    if (!header) return;
+    const wrapper = document.querySelector('.header-nav-wrapper');
+    if (!wrapper) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+        if (window.scrollY > 40) {
+            wrapper.classList.add('scrolled');
         } else {
-            header.classList.remove('scrolled');
+            wrapper.classList.remove('scrolled');
         }
     });
 }
 
-/* --- Mobile Menu Navigation --- */
+/* --- Mobile Menu Navigation Drawer --- */
 function initMobileNav() {
     const toggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -55,7 +55,7 @@ function initMobileNav() {
     });
 }
 
-/* --- Interactive Neural Background Canvas (Light Theme Colors) --- */
+/* --- Interactive Neural Background Canvas --- */
 function initNeuralBackground() {
     const canvas = document.getElementById('bg-canvas');
     if (!canvas) return;
@@ -100,7 +100,7 @@ function initNeuralBackground() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(92, 46, 145, 0.2)'; // Tinted purple for light mode
+            ctx.fillStyle = 'rgba(92, 46, 145, 0.2)'; 
             ctx.fill();
         }
     }
@@ -134,7 +134,7 @@ function initNeuralBackground() {
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
                 if (dist < connectionDistance) {
-                    const alpha = (1 - dist / connectionDistance) * 0.08; // Softer line render
+                    const alpha = (1 - dist / connectionDistance) * 0.08; 
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -288,34 +288,33 @@ function initContactForm() {
             en: {
                 fillRequired: 'Please fill in all required fields.',
                 invalidEmail: 'Please provide a valid email address.',
-                sending: 'Transmitting Strategy Request...',
-                successMsg: 'Transmission successful! A Yelagiri Infotech enterprise consultant will follow up within 2 hours.'
+                sending: 'Transmitting Project Inquiry...',
+                successMsg: 'Project request transmitted successfully! A Yelagiri Infotech principal architect will follow up within 2 hours.'
             },
             fr: {
-                fillRequired: 'S\'il vous plaît remplir tous les champs obligatoires.',
-                invalidEmail: 'Veuillez fournir une adresse email valide.',
-                sending: 'Transmission de la demande de stratégie...',
-                successMsg: 'Transmission réussie ! Un consultant de Yelagiri Infotech vous contactera dans les 2 heures.'
+                fillRequired: 'Veuillez remplir tous les champs obligatoires.',
+                invalidEmail: 'Veuillez fournir une adresse e-mail valide.',
+                sending: 'Transmission de la demande de projet...',
+                successMsg: 'Demande de projet transmise avec succès ! Un architecte principal de Yelagiri Infotech vous contactera dans les 2 heures.'
             },
             es: {
                 fillRequired: 'Por favor, rellene todos los campos obligatorios.',
                 invalidEmail: 'Por favor, proporcione una dirección de correo electrónico válida.',
-                sending: 'Transmitiendo solicitud de estrategia...',
-                successMsg: '¡Transmisión exitosa! Un consultor empresarial de Yelagiri Infotech se comunicará en menos de 2 horas.'
+                sending: 'Transmitiendo consulta de proyecto...',
+                successMsg: '¡Consulta de proyecto transmitida con éxito! Un arquitecto principal de Yelagiri Infotech se comunicará en menos de 2 horas.'
             }
         };
         return alerts[lang][key];
     }
 }
 
-/* --- Cookie Consent Banner Logic --- */
+/* --- Cookie Consent Banner --- */
 function initCookieBanner() {
     const banner = document.getElementById('cookieBanner');
     const acceptBtn = document.getElementById('cookieAcceptBtn');
     const declineBtn = document.getElementById('cookieDeclineBtn');
     if (!banner) return;
 
-    // Check localStorage
     const consent = localStorage.getItem('cookieConsent');
     if (!consent) {
         setTimeout(() => {
@@ -334,19 +333,20 @@ function initCookieBanner() {
     });
 }
 
-/* --- Globalization & i18n Translation Engine --- */
+/* --- Globalization & i18n Translation Dictionary --- */
 const translations = {
     en: {
-        // Navigation
+        // Navigation (HubSpot Inspired)
         navHome: "Home",
         navServices: "Services",
         navDomains: "Domains",
         navAbout: "About Us",
         navContact: "Consultation",
+        navCareers: "Careers",
         
         // Cookie Banner
-        cookieText: "We use cookies to optimize system analysis, monitor transaction flows, and personalize your experience. By accepting, you consent to our privacy policies.",
-        cookieAccept: "Accept Consent",
+        cookieText: "We use cookies to analyze traffic, manage secure transactions, and personalize your experience. By clicking accept, you consent to our use of cookies.",
+        cookieAccept: "Accept Cookies",
         cookieDecline: "Decline",
 
         // Footer common
@@ -357,13 +357,15 @@ const translations = {
         footerNewsletterP: "Subscribe to our newsletter for insights on IT strategy and AI engineering trends.",
         footerNewsletterBtn: "Join",
         footerNewsletterPlaceholder: "Enter business email",
-        footerCopyright: "© 2026 Yelagiri Infotech. All rights reserved. Built with technical excellence.",
+        footerCopyright: "© 2026 Yelagiri Infotech (OPC). All rights reserved. Built with technical excellence.",
+        addressRegisteredLabel: "Registered Office:",
+        addressBranchLabel: "Branch Office:",
 
         // HOME PAGE (index.html)
-        heroBadge: "Beyond Transactions: Building Engagement",
-        heroTitle: "Engineering Intelligence, scaling marketplaces",
-        heroDesc: "At Yelagiri Infotech, we empower enterprises to thrive in the digital marketplace. From scalable e‑commerce platforms to automated Field Services software and tailored Large Language Model integrations, we design cloud solutions that streamline operations, boost customer engagement, and accelerate growth in the cognitive era.",
-        heroCtaPrimary: "Partner With Us",
+        heroBadge: "Next-Gen Enterprise Architecture",
+        heroTitle: "Engineering Intelligence. Building Products That Last.",
+        heroDesc: "At Yelagiri Infotech, we build custom cloud solutions that solve complex operations. We deliver next-generation ecommerce systems, automated Field Services software, robust SAAS products, specialized mobile apps and tailored Large Language Model integrations to prepare your business for the cognitive era.",
+        heroCtaPrimary: "Start Your Project",
         heroCtaSecondary: "Explore Services",
         statUptimeLabel: "System SLA Uptime",
         statClientsLabel: "Enterprises Scaled",
@@ -383,8 +385,8 @@ const translations = {
         servBadge: "Capabilities",
         servTitle: "Bespoke Software Services",
         servDesc: "Discover our core software capabilities designed to elevate every department of your enterprise.",
-        servCardTitle1: "E‑Commerce Platform",
-        servCardDesc1: "Bespoke Cloud E‑Commerce Platform designed to unify product catalogs, streamline supply chains, optimize financial auditing, and orchestrate customer workflows. Built for massive transactional throughput and seamless marketplace scaling.",
+        servCardTitle1: "Cloud ERP Systems",
+        servCardDesc1: "Bespoke Enterprise Resource Planning software developed to centralize supply chains, financial auditing, inventory pools, and personnel workflows. Built for massive transactional throughput.",
         servCardLink1: "Learn More",
         servCardTitle2: "Field Services Software",
         servCardDesc2: "End-to-end mobile dispatch platforms featuring dynamic GPS routing, offline functionality, real-time job allocation, and telemetry integrations for distributed field assets.",
@@ -392,6 +394,9 @@ const translations = {
         servCardTitle3: "Custom LLM & AI",
         servCardDesc3: "Production-grade Large Language Model implementations, Retrieval-Augmented Generation (RAG) databases, and agentic workflows tuned to proprietary business documents.",
         servCardLink3: "Learn More",
+        servCardTitle4: "E-Commerce Platforms",
+        servCardDesc4: "Customized, high-performance E-Commerce engines built to sustain massive seasonal traffic spikes and facilitate frictionless buying journeys. Headless design ensures agility.",
+        servCardLink4: "Learn More",
         ctaTitle: "Ready to Engineer Your Competitive Edge?",
         ctaDesc: "Connect with Yelagiri Infotech's architects today. Let us structure a clear technical strategy or build a prototype that demonstrates immediate operational ROI.",
         ctaBtn: "Schedule Strategic Review",
@@ -403,7 +408,7 @@ const translations = {
         tabErpBtn: "Enterprise ERP",
         tabFieldBtn: "Field Services",
         tabStrategyBtn: "Tech Strategy",
-        tabTestingBtn: "E‑Commerce Platform",
+        tabTestingBtn: "E-Commerce Platforms",
         tabLlmBtn: "LLM & Generative AI",
         erpTitle: "Next-Generation Enterprise Resource Planning (ERP)",
         erpDesc1: "Modern operations require real-time transparency. Our custom ERP solutions unify complex operational threads into a single, cohesive digital platform. Instead of heavy, rigid legacy setups, we engineer flexible, event-driven web environments custom-built for your specific business rules.",
@@ -426,13 +431,13 @@ const translations = {
         stratBullet2: "Multi-cloud cost optimization plans (AWS, GCP, Azure).",
         stratBullet3: "Disaster recovery planning, database backup policies, and system failover strategies.",
         stratBullet4: "Corporate AI readiness workshops and technical vendor evaluation.",
-        testTitle: "Comprehensive Cloud E‑Commerce Platform",
-        testDesc1: "Reliability is essential for keeping customer trust. Yelagiri Infotech delivers bespoke e‑commerce solutions that unify product catalogs, streamline supply chains, and orchestrate customer workflows. Our platforms are engineered for massive transactional throughput, ensuring your marketplace remains fast, secure, and scalable under heavy usage.",
-        testDesc2: "Our e‑commerce capability covers end‑to‑end product and inventory management, integrated payment and financial auditing, and real‑time customer engagement. We verify that your platforms remain seamless, secure, and fully functional as they grow.",
-        testBullet1: "Centralized product and inventory management.",
-        testBullet2: "Integrated payment gateways and financial auditing tools.",
-        testBullet3: "Real‑time customer engagement and personalization.",
-        testBullet4: "Marketplace scaling with seamless CI/CD deployment.",
+        testTitle: "Scalable E-Commerce & Retail Engine Platforms",
+        testDesc1: "We engineer customized, high-performance E-Commerce engines built to sustain massive seasonal traffic spikes and facilitate frictionless buying journeys. Our systems decouple frontend interfaces from backend processes for increased security and agility.",
+        testDesc2: "From multi-vendor shopping portals to custom merchant integrations, we embed secure checkout processing, automated taxation algorithms, real-time inventory pooling, and predictive recommendations to increase conversion metrics.",
+        testBullet1: "Custom shopping cart checkout and secure multi-currency payments.",
+        testBullet2: "Headless commerce architecture with GraphQL APIs.",
+        testBullet3: "Real-time multi-warehouse inventory reconciliation.",
+        testBullet4: "AI-powered product recommendations and user cart tracking.",
         llmTitle: "Private LLM Deployment & AI Agent Engineering",
         llmDesc1: "Moving past generic chat interfaces, we build custom Large Language Model (LLM) workflows that connect directly with your company's data. We design secure Retrieval-Augmented Generation (RAG) structures, enabling employees and customers to query complex knowledge bases with near-zero hallucinations.",
         llmDesc2: "By using vector databases (like Pinecone, Milvus, or PGVector) and open-source models (Llama-3, Mistral, Qwen) hosted locally or in private clouds, we ensure your operational data never leaves your secure boundary. We also design autonomous AI agents that can handle multi-step back-office processing tasks.",
@@ -470,7 +475,7 @@ const translations = {
 
         // ABOUT PAGE (about.html)
         aboutHeadBadge: "Our Identity",
-        aboutHeadTitle: "Yelagiri Infotech",
+        aboutHeadTitle: "Yelagiri Infotech (OPC)",
         aboutHeadDesc: "Building high-performing, custom software foundations that support enterprise growth.",
         aboutMissionTitle: "Our Mission: Transforming Business Through AI and Technical Excellence",
         aboutMissionDesc1: "Founded on the principle that software should be treated as core company assets rather than temporary expenses, Yelagiri Infotech designs and builds high-quality software solutions. We partner with forward-thinking enterprises to modernize outdated systems and integrate secure, private artificial intelligence.",
@@ -503,8 +508,10 @@ const translations = {
         contactSideItemTitle1: "Corporate Inquiry",
         contactSideItemTitle2: "Response SLA Assurance",
         contactSideItemDesc2: "All enterprise strategy inquiries receive a response from a lead developer within 2 business hours.",
-        contactSideItemTitle3: "Engineering Center",
-        contactSideItemDesc3: "Yelagiri Infotech Software Parks, Vellore District, Tamil Nadu, India",
+        contactSideItemTitle3: "Registered Office",
+        contactSideItemDesc3: "Yelagiri Infotech (OPC). SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, India.",
+        contactSideItemTitle4: "Branch Office",
+        contactSideItemDesc4: "NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011",
         labelName: "Your Name *",
         labelEmail: "Business Email *",
         labelCompany: "Organization Name",
@@ -513,7 +520,7 @@ const translations = {
         optErp: "Enterprise Cloud ERP Systems",
         optField: "Field Services Sync Solutions",
         optStrategy: "Technical Strategy Consulting",
-        optTesting: "E-Commerce Platform",
+        optTesting: "E-Commerce Platforms",
         optLlm: "Custom LLM & Private AI Engines",
         optOther: "Bespoke Software Engineering",
         labelBudget: "Estimated Project Scope / Budget",
@@ -523,7 +530,17 @@ const translations = {
         optBudget4: "Custom Multi-Year Scaling (Above $150k)",
         labelMessage: "Project Scope & Core Operational Goals *",
         placeholderMessage: "Describe the operational bottlenecks you are looking to solve and your target domain (Retail, Bidding, Field Services, Education)...",
-        btnSubmit: "Submit Strategy Request"
+        btnSubmit: "Submit Project Request",
+
+        // CAREERS PAGE (careers.html [NEW])
+        careersHeadBadge: "Join Our Team",
+        careersHeadTitle: "Build the Future of Enterprise Technology",
+        careersHeadDesc: "At Yelagiri Infotech, we cultivate an engineering-first culture focused on technical excellence, secure private AI engineering, and scalable products.",
+        careersCultureTitle: "Why Yelagiri Infotech?",
+        careersCultureDesc: "We believe in hiring talented individuals who are passionate about solving complex enterprise problems. We offer complete IP ownership transfer structures for client projects, meaning you work on unique code bases built from scratch using clean microservices, modern cloud-native systems, and vector database architectures.",
+        careersApplyTitle: "Open Positions & How to Apply",
+        careersApplyDesc: "We maintain a streamlined, direct recruitment workflow. All of our active open positions, software engineering internships, and AI research vacancies are published exclusively through LinkedIn and major job portals. We do not accept unsolicited email applications for unlisted roles.",
+        careersApplyBtn: "Check Openings on LinkedIn"
     },
     fr: {
         // Navigation
@@ -532,27 +549,30 @@ const translations = {
         navDomains: "Secteurs",
         navAbout: "À Propos",
         navContact: "Consultation",
+        navCareers: "Carrières",
         
         // Cookie Banner
-        cookieText: "Nous utilisons des cookies pour optimiser l'analyse du système, surveiller les flux de transactions et personnaliser votre expérience. En acceptant, vous consentez à nos politiques de confidentialité.",
-        cookieAccept: "Accepter le consentement",
+        cookieText: "Nous utilisons des cookies pour analyser le trafic, gérer les transactions sécurisées et personnaliser votre expérience. En cliquant sur accepter, vous consentez à notre utilisation des cookies.",
+        cookieAccept: "Accepter",
         cookieDecline: "Décliner",
 
         // Footer common
-        footerDesc: "Fournir des services de développement de logiciels personnalisés de premier plan, de conseil en informatique et d'ingénierie d'IA sécurisée. Aider les entreprises à évoluer en toute sécurité avec une excellence technique.",
+        footerDesc: "Fournir des services de développement de logiciels personnalisés de premier plan, de conseil en informatique et d'ingénierie d'IA sécurisée. Aider les entreprises à évoluer avec une excellence technique.",
         footerServicesTitle: "Services d'ingénierie",
         footerDomainsTitle: "Secteurs Cibles",
         footerNewsletterTitle: "Restez Informé",
         footerNewsletterP: "Abonnez-vous à notre newsletter pour obtenir des informations sur la stratégie informatique et les tendances en IA.",
         footerNewsletterBtn: "S'inscrire",
         footerNewsletterPlaceholder: "Entrez l'adresse e-mail",
-        footerCopyright: "© 2026 Yelagiri Infotech. Tous droits réservés. Construit avec excellence technique.",
+        footerCopyright: "© 2026 Yelagiri Infotech (OPC). Tous droits réservés. Construit avec excellence technique.",
+        addressRegisteredLabel: "Siège social :",
+        addressBranchLabel: "Succursale :",
 
         // HOME PAGE (index.html)
-        heroBadge: "Au‑delà des transactions : créer l’engagement ",
-        heroTitle: "Intelligence en ingénierie, pour des marketplaces à grande échelle",
-        heroDesc: "Chez Yelagiri Infotech, nous aidons les entreprises à prospérer dans le commerce numérique. Qu’il s’agisse de plateformes e‑commerce évolutives, de logiciels de services sur le terrain automatisés ou d’intégrations sur mesure de modèles de langage avancés, nous créons des solutions cloud qui simplifient vos opérations, renforcent l’engagement client et stimulent la croissance à l’ère cognitive.",
-        heroCtaPrimary: "Partenaires avec nous",
+        heroBadge: "Architecture d'entreprise de nouvelle génération",
+        heroTitle: "Ingénierie de l'intelligence. Créer des produits durables.",
+        heroDesc: "Chez Yelagiri Infotech, nous construisons des solutions cloud sur mesure pour résoudre les opérations complexes. Nous fournissent des systèmes e-commerce de nouvelle génération, des logiciels automatisés de services sur le terrain, des produits SAAS robustes, des applications mobiles spécialisées et des intégrations de grands modèles de langage sur mesure pour préparer votre entreprise à l'ère cognitive.",
+        heroCtaPrimary: "Démarrer votre projet",
         heroCtaSecondary: "Explorer les services",
         statUptimeLabel: "Disponibilité SLA du système",
         statClientsLabel: "Entreprises accompagnées",
@@ -561,7 +581,7 @@ const translations = {
         philBadge: "Excellence en ingénierie",
         philTitle: "Associer l'ingénierie avancée à la vision stratégique",
         philText1: "Les entreprises modernes sont confrontées à un double défi : maintenir des opérations quotidiennes robustes et évolutives tout en adoptant rapidement l'intelligence artificielle pour garantir leur leadership sur le marché. Yelagiri Infotech comble ce fossé.",
-        philText2: "Nous ne croyons pas aux solutions logicielles génériques et standardisées. Nous concevons, architecturons et déployons des architectures de microservices propres et sur mesure qui se connectent de manière transparente à vos systèmes existants. En donnant la priorité aux performances brutes, à la conformité stricte des données et aux conceptions cloud flexibles, nous vous aidons à transformer vos dépenses opérationnelles en actifs à long terme.",
+        philText2: "We don't believe in generic, out-of-the-box software wrappers. We design, architect, and deploy clean, bespoke microservice architectures that seamlessly connect into your existing systems. By prioritizing raw performance, strict data compliance, and flexible cloud designs, we help you transform operational expenses into long-term assets.",
         philBtn: "Découvrir notre philosophie",
         philFeatTitle1: "Base Cloud Évolutive",
         philFeatDesc1: "Toutes nos solutions sont construites à l'aide de technologies cloud natives résilientes, prenant en charge des millions de transactions en toute simplicité.",
@@ -572,15 +592,18 @@ const translations = {
         servBadge: "Capacités",
         servTitle: "Services logiciels sur mesure",
         servDesc: "Découvrez nos capacités logicielles fondamentales conçues pour élever chaque département de votre entreprise.",
-        servCardTitle1: "Plateforme de commerce électronique",
-        servCardDesc1: "Plateforme e‑commerce cloud sur mesure, conçue pour unifier les catalogues produits, rationaliser les chaînes d’approvisionnement, optimiser l’audit financier et orchestrer les parcours clients. Conçue pour un volume transactionnel massif et une expansion fluide des marketplaces.",
+        servCardTitle1: "Systèmes ERP Cloud",
+        servCardDesc1: "Bespoke Enterprise Resource Planning software developed to centralize supply chains, financial auditing, inventory pools, and personnel workflows. Built for massive transactional throughput.",
         servCardLink1: "En savoir plus",
         servCardTitle2: "Logiciels de services sur le terrain",
-        servCardDesc2: "Plateformes mobiles de répartition de bout en bout comprenant l'optimisation des itinéraires GPS en temps réel, le fonctionnement hors ligne, l'allocation des tâches et les intégrations télématiques.",
+        servCardDesc2: "End-to-end mobile dispatch platforms featuring dynamic GPS routing, offline functionality, real-time job allocation, and telemetry integrations for distributed field assets.",
         servCardLink2: "En savoir plus",
         servCardTitle3: "IA et LLM sur mesure",
-        servCardDesc3: "Implémentations de modèles de langage de niveau production, bases de données RAG et flux de travail agentiels adaptés aux documents confidentiels de l'entreprise.",
+        servCardDesc3: "Production-grade Large Language Model implementations, Retrieval-Augmented Generation (RAG) databases, and agentic workflows tuned to proprietary business documents.",
         servCardLink3: "En savoir plus",
+        servCardTitle4: "Plateformes E-Commerce",
+        servCardDesc4: "Moteurs e-commerce sur mesure à haute performance, bâtis pour supporter les pics de trafic saisonniers et offrir des parcours d'achat sans friction.",
+        servCardLink4: "En savoir plus",
         ctaTitle: "Prêt à concevoir votre avantage concurrentiel ?",
         ctaDesc: "Contactez les architectes de Yelagiri Infotech dès aujourd'hui. Laissez-nous concevoir une stratégie technique claire ou construire un prototype démontrant un retour sur investissement rapide.",
         ctaBtn: "Planifier un examen stratégique",
@@ -592,7 +615,7 @@ const translations = {
         tabErpBtn: "ERP d'Entreprise",
         tabFieldBtn: "Services Terrain",
         tabStrategyBtn: "Stratégie Tech",
-        tabTestingBtn: "Plateforme e‑commerce",
+        tabTestingBtn: "Plateformes E-Commerce",
         tabLlmBtn: "LLM & IA Générative",
         erpTitle: "Planification des Ressources d'Entreprise (ERP) de Nouvelle Génération",
         erpDesc1: "Les opérations modernes nécessitent une transparence en temps réel. Nos solutions ERP personnalisées unifient les flux opérationnels complexes dans une plateforme numérique unique. Au lieu de structures anciennes et rigides, nous concevons des environnements web flexibles et orientés événements, adaptés à vos règles métier.",
@@ -607,21 +630,21 @@ const translations = {
         fieldBullet1: "Optimisation algorithmique des itinéraires et partage de position GPS.",
         fieldBullet2: "Applications mobiles avec bases de données SQLite hors ligne.",
         fieldBullet3: "Console de répartition interactive avec plannings en glisser-déposer.",
-        fieldBullet4: "Flux automatisés de notification client par SMS et e-mail.",
-        stratTitle: "Stratégie Technique & Conseil en Architecture",
+        fieldBullet4: "Automated client notification workflows via SMS and email.",
+        stratTitle: "Technical Strategy & Architecture Consulting",
         stratDesc1: "Une mauvaise planification architecturale limite rapidement la croissance de l'entreprise. Nos consultants analysent vos systèmes pour identifier les goulots d'étranglement, les points de défaillance uniques et les risques de sécurité.",
         stratDesc2: "Nous aidons les équipes dirigeantes à planifier des migrations cloud sécurisées, à restructurer les codes monolithiques en microservices évolutifs et à évaluer la maturité IA. Nous fournissons des feuilles de route concrètes pour faire évoluer votre infrastructure logicielles au meilleur coût.",
         stratBullet1: "Feuilles de route de migration vers les microservices et conceptions serverless.",
         stratBullet2: "Optimisation des coûts multi-cloud (AWS, GCP, Azure).",
         stratBullet3: "Plans de reprise d'activité, politiques de sauvegarde et stratégies de basculement.",
         stratBullet4: "Ateliers de préparation à l'IA d'entreprise et évaluation de fournisseurs techniques.",
-        testTitle: "Plateforme e‑commerce cloud complète",
-        testDesc1: "La fiabilité est essentielle pour maintenir la confiance des clients. Yelagiri Infotech propose des solutions e‑commerce sur mesure qui unifient les catalogues produits, rationalisent les chaînes d’approvisionnement et orchestrent les parcours clients.",
-        testDesc2: "Nos plateformes sont conçues pour un volume transactionnel massif, garantissant des marketplaces rapides, sécurisées et évolutives même en cas d’utilisation intensive.",
-        testBullet1: "Gestion centralisée des produits et des stocks.",
-        testBullet2: "Outils intégrés de paiement et d’audit financier.",
-        testBullet3: "Engagement client en temps réel et personnalisation.",
-        testBullet4: "Expansion des marketplaces avec déploiement CI/CD fluide",
+        testTitle: "Moteurs E-Commerce Évolutifs & Systèmes de Vente",
+        testDesc1: "Nous concevons des moteurs e-commerce sur mesure à haute performance, bâtis pour supporter les pics de trafic saisonniers et offrir des parcours d'achat sans friction. Nos systèmes découplent les interfaces front-end et les processus back-end pour plus de sécurité.",
+        testDesc2: "Des portails d'achat multi-vendeurs aux intégrations de marchands personnalisées, nous intégrons des modules de paiement sécurisés, des taxes automatisées, des stocks en temps réel et des recommandations prédictives.",
+        testBullet1: "Paiement sécurisé sur panier et transactions multi-devises.",
+        testBullet2: "Architecture de commerce découplée (headless) avec des API GraphQL.",
+        testBullet3: "Rapprochement des stocks en temps réel multi-entrepôts.",
+        testBullet4: "Recommandations de produits basées sur l'IA et suivi des paniers.",
         llmTitle: "Déploiement de LLM Privés & Ingénierie d'Agents d'IA",
         llmDesc1: "Au-delà des simples fenêtres de discussion, nous créons des flux de travail basés sur des modèles de langage (LLM) connectés à vos données métiers. Nous concevons des structures RAG (Génération augmentée par récupération) pour interroger vos bases de connaissances sans hallucination.",
         llmDesc2: "Grâce à des bases de données vectorielles (Pinecone, Milvus, PGVector) et des modèles open-source (Llama-3, Mistral, Qwen) hébergés en local ou sur cloud privé, vos données restent confidentielles. Nous concevons également des agents autonomes pour automatiser vos processus.",
@@ -659,7 +682,7 @@ const translations = {
 
         // ABOUT PAGE (about.html)
         aboutHeadBadge: "Notre Identité",
-        aboutHeadTitle: "Yelagiri Infotech",
+        aboutHeadTitle: "Yelagiri Infotech (OPC)",
         aboutHeadDesc: "Construire des architectures logicielles performantes et personnalisées pour soutenir la croissance de l'entreprise.",
         aboutMissionTitle: "Notre Mission : Transformer les Entreprises par l'IA et l'Excellence Technique",
         aboutMissionDesc1: "Fondée sur le principe que les logiciels doivent être considérés comme des actifs stratégiques et non comme des coûts passagers, Yelagiri Infotech conçoit des solutions logicielles de haute qualité. Nous accompagnons les entreprises dans la modernisation de leurs systèmes et l'intégration sécurisée d'IA.",
@@ -692,8 +715,10 @@ const translations = {
         contactSideItemTitle1: "Demande Entreprise",
         contactSideItemTitle2: "SLA de Réponse Garantie",
         contactSideItemDesc2: "Toutes les demandes de conseil d'entreprise reçoivent une réponse d'un responsable technique sous 2 heures.",
-        contactSideItemTitle3: "Centre d'Ingénierie",
-        contactSideItemDesc3: "Yelagiri Infotech Software Parks, District de Vellore, Tamil Nadu, Inde",
+        contactSideItemTitle3: "Siège social",
+        contactSideItemDesc3: "Yelagiri Infotech (OPC). SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, Inde.",
+        contactSideItemTitle4: "Succursale",
+        contactSideItemDesc4: "NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011",
         labelName: "Votre Nom *",
         labelEmail: "E-mail Professionnel *",
         labelCompany: "Nom de l'Entreprise",
@@ -702,7 +727,7 @@ const translations = {
         optErp: "Systèmes ERP Cloud d'Entreprise",
         optField: "Solutions de Services sur le Terrain",
         optStrategy: "Conseil en Stratégie Technique",
-        optTesting: "Assurance Qualité & Tests Logiciels",
+        optTesting: "Plateformes E-Commerce",
         optLlm: "Modèles de Langage (LLM) & IA Privée",
         optOther: "Développement Logiciel sur Mesure",
         labelBudget: "Budget / Envergure du Projet",
@@ -712,7 +737,17 @@ const translations = {
         optBudget4: "Développement et Support Pluriannuel (Plus de 150k$)",
         labelMessage: "Objectifs Opérationnels & Description du Projet *",
         placeholderMessage: "Décrivez les difficultés que vous souhaitez résoudre et votre secteur cible (Commerce, Appels d'offres, Services terrain, Éducation)...",
-        btnSubmit: "Envoyer la Demande Technique"
+        btnSubmit: "Envoyer la Demande Technique",
+
+        // CAREERS PAGE (careers.html [NEW])
+        careersHeadBadge: "Rejoindre l'équipe",
+        careersHeadTitle: "Construire l'avenir de la technologie d'entreprise",
+        careersHeadDesc: "Chez Yelagiri Infotech, nous cultivons une culture axée sur l'ingénierie, l'excellence technique et le développement de produits évolutifs.",
+        careersCultureTitle: "Pourquoi Yelagiri Infotech ?",
+        careersCultureDesc: "Nous croyons au recrutement de talents passionnés par la résolution de problèmes d'entreprise complexes. Nous offrons des opportunités uniques de travailler sur des bases de codes écrites de zéro avec des microservices et des architectures d'IA.",
+        careersApplyTitle: "Postes Ouverts & Comment Postuler",
+        careersApplyDesc: "Nous maintenons un processus de recrutement rationalisé. Tous nos postes ouverts et offres de stages en ingénierie logicielle ou IA sont publiés exclusivement sur LinkedIn et les portails d'emploi majeurs.",
+        careersApplyBtn: "Voir les offres sur LinkedIn"
     },
     es: {
         // Navigation
@@ -721,10 +756,11 @@ const translations = {
         navDomains: "Sectores",
         navAbout: "Nosotros",
         navContact: "Consultar",
+        navCareers: "Carreras",
         
         // Cookie Banner
-        cookieText: "Utilizamos cookies para optimizar el análisis del sistema, monitorear los flujos de transacciones y personalizar su experiencia. Al aceptar, consiente nuestras políticas de privacidad.",
-        cookieAccept: "Aceptar consentimiento",
+        cookieText: "Utilizamos cookies para analizar el tráfico, gestionar transacciones seguras y personalizar su experiencia. Al hacer clic en aceptar, acepta nuestro uso de cookies.",
+        cookieAccept: "Aceptar",
         cookieDecline: "Rechazar",
 
         // Footer common
@@ -735,13 +771,15 @@ const translations = {
         footerNewsletterP: "Suscríbase a nuestro boletín para recibir análisis sobre estrategia de TI y tendencias de ingeniería de IA.",
         footerNewsletterBtn: "Unirse",
         footerNewsletterPlaceholder: "Ingrese correo comercial",
-        footerCopyright: "© 2026 Yelagiri Infotech. Todos los derechos reservados. Desarrollado con excelencia técnica.",
+        footerCopyright: "© 2026 Yelagiri Infotech (OPC). Todos los derechos reservados. Desarrollado con excelencia técnica.",
+        addressRegisteredLabel: "Oficina registrada:",
+        addressBranchLabel: "Sucursal:",
 
         // HOME PAGE (index.html)
-        heroBadge: "Más allá de las transacciones: construyendo compromiso",
-        heroTitle: "Inteligencia en ingeniería, escalando marketplaces",
-        heroDesc: "En Yelagiri Infotech, impulsamos a las empresas para que prosperen en el mercado digital. Desde plataformas de comercio electrónico escalables hasta software automatizado de servicios de campo e integraciones personalizadas de modelos de lenguaje avanzado, diseñamos soluciones en la nube que optimizan las operaciones, aumentan la interacción con los clientes y aceleran el crecimiento en la era cognitiva.",
-        heroCtaPrimary: "Collaborez avec nous",
+        heroBadge: "Arquitectura empresarial de última generación",
+        heroTitle: "Ingeniería de Inteligencia. Desarrollando Productos Duraderos.",
+        heroDesc: "En Yelagiri Infotech construimos soluciones en la nube personalizadas para optimizar operaciones complejas. Entregamos sistemas de comercio electrónico de última generación, software de servicios de campo automatizado, productos SAAS robustos, aplicaciones móviles especializadas e integraciones de modelos de lenguaje para preparar a su empresa para la era cognitiva.",
+        heroCtaPrimary: "Comenzar Proyecto",
         heroCtaSecondary: "Ver servicios",
         statUptimeLabel: "Disponibilidad SLA del sistema",
         statClientsLabel: "Empresas impulsadas",
@@ -750,26 +788,29 @@ const translations = {
         philBadge: "Excelencia en ingeniería",
         philTitle: "Combinando ingeniería avanzada con visión estratégica",
         philText1: "Las empresas modernas se enfrentan al doble reto de mantener operaciones diarias robustas y escalables y, al mismo tiempo, adoptar la inteligencia artificial para asegurar su liderazgo en el mercado. Yelagiri Infotech cubre esta brecha.",
-        philText2: "No creemos en soluciones de software genéricas e impersonales. Diseñamos, estructuramos y desplegamos arquitecturas de microservicios limpias y personalizadas que se conectan de forma nativa a sus sistemas. Al priorizar el rendimiento, el cumplimiento riguroso de los datos y diseños de nube flexibles, le ayudamos a transformar los costos operativos en activos de valor.",
+        philText2: "We don't believe in generic, out-of-the-box software wrappers. We design, architect, and deploy clean, bespoke microservice architectures that seamlessly connect into your existing systems. By prioritizing raw performance, strict data compliance, and flexible cloud designs, we help you transform operational expenses into long-term assets.",
         philBtn: "Conozca nuestra filosofía",
         philFeatTitle1: "Infraestructura Cloud Escalable",
         philFeatDesc1: "Todas las soluciones se construyen con tecnologías nativas de la nube, soportando millones de transacciones de forma fluida.",
-        philFeatTitle2: "Inteligencia Artificial Segura",
+        philFeatTitle2: "Inteligencia Artificielle Segura",
         philFeatDesc2: "Integramos LLM y arquitecturas neuronales manteniendo la protección de la propiedad intelectual y el alojamiento privado como prioridades absolutas.",
         philFeatTitle3: "Garantía de Calidad Validada",
         philFeatDesc3: "Cada desarrollo pasa por pruebas de software rigurosas y continuas para garantizar un funcionamiento perfecto y tiempos de respuesta veloces.",
         servBadge: "Capacidades",
         servTitle: "Servicios de software a medida",
         servDesc: "Descubra nuestras capacidades de ingeniería de software diseñadas para impulsar cada departamento de su empresa.",
-        servCardTitle1: "Plataforma de comercio electrónico",
-        servCardDesc1: "Plataforma de comercio electrónico en la nube, personalizada para unificar catálogos de productos, agilizar las cadenas de suministro, optimizar la auditoría financiera y coordinar los flujos de trabajo de los clientes. Diseñada para un alto volumen transaccional y la expansión fluida de los marketplaces.",
+        servCardTitle1: "Sistemas ERP en la Nube",
+        servCardDesc1: "Bespoke Enterprise Resource Planning software developed to centralize supply chains, financial auditing, inventory pools, and personnel workflows. Built for massive transactional throughput.",
         servCardLink1: "Saber más",
         servCardTitle2: "Software de servicios de campo",
-        servCardDesc2: "Plataformas móviles de despacho de punta a punta que incluyen optimización de rutas GPS en tiempo real, funcionamiento sin conexión, asignación de tareas e integración de telemetría.",
+        servCardDesc2: "End-to-end mobile dispatch platforms featuring dynamic GPS routing, offline functionality, real-time job allocation, and telemetry integrations for distributed field assets.",
         servCardLink2: "Saber más",
         servCardTitle3: "IA y LLM personalizados",
-        servCardDesc3: "Implementaciones profesionales de modelos de lenguaje de gran tamaño, bases de datos vectoriales RAG y agentes autónomos adaptados a los documentos privados de su empresa.",
+        servCardDesc3: "Production-grade Large Language Model implementations, Retrieval-Augmented Generation (RAG) databases, and agentic workflows tuned to proprietary business documents.",
         servCardLink3: "Saber más",
+        servCardTitle4: "Plataformas de E-Commerce",
+        servCardDesc4: "Motores de comercio electrónico personalizados de alto rendimiento, preparados para soportar picos transaccionales y facilitar compras seguras.",
+        servCardLink4: "Saber más",
         ctaTitle: "¿Listo para diseñar su ventaja competitiva?",
         ctaDesc: "Hable con los arquitectos de Yelagiri Infotech hoy mismo. Permítanos diseñar una estrategia técnica estructurada o desarrollar un prototipo que demuestre el retorno de inversión.",
         ctaBtn: "Programar revisión estratégica",
@@ -781,10 +822,10 @@ const translations = {
         tabErpBtn: "ERP Corporativo",
         tabFieldBtn: "Servicios de Campo",
         tabStrategyBtn: "Estrategia Tech",
-        tabTestingBtn: "Plataforma e‑commerce",
+        tabTestingBtn: "Plataformas de E-Commerce",
         tabLlmBtn: "LLM e IA Generativa",
         erpTitle: "Planificación de Recursos Empresariales (ERP) de Última Generación",
-        erpDesc1: "Las operaciones modernas requieren transparencia en tiempo real. Nuestras soluciones ERP personalizadas unifican flujos de trabajo complejos en una plataforma digital integrada. Diseñamos entornos web flexibles y basados en eventos adaptados a sus procesos comerciales en lugar de sistemas tradicionales rígidos.",
+        erpDesc1: "Las operaciones modernas requieren transparencia en tiempo real. Nuestras soluciones ERP personalizadas unifican flujos de trabajo complejos en una plataforma digital integrada. Diseñamos entornos web flexibles y basados en eventos adaptados a sus procesos comerciales en lugar de sistemas tradicional rígidos.",
         erpDesc2: "Nos especializamos en sincronización de inventario, automatización de compras a proveedores, registros contables en tiempo real y facturación multidivisa. Nuestras arquitecturas aprovechan API robustas, optimización de bases de datos (PostgreSQL/Redis) y contenedores seguros para absorber picos transaccionales.",
         erpBullet1: "Conciliación automática de inventarios y contabilidad en tiempo real.",
         erpBullet2: "Flujos de órdenes de compra con proveedores y planificación logística predictiva.",
@@ -794,7 +835,7 @@ const translations = {
         fieldDesc1: "Gestionar cuadrillas de servicio requiere coordinación inmediata y sincronización de datos eficiente. Yelagiri Infotech desarrolla herramientas móviles que alinean en tiempo real a despachadores y técnicos.",
         fieldDesc2: "Nuestras soluciones cuentan con un motor de rutas personalizado que analiza el tráfico, las habilidades técnicas y la ubicación del servicio. Las aplicaciones móviles están diseñadas para operar sin conexión a internet, permitiendo consultar manuales y capturar firmas de conformidad, cargando los datos al reconectarse.",
         fieldBullet1: "Optimización de rutas de transporte y localización GPS de técnicos.",
-        fieldBullet2: "Aplicaciones móviles con bases de datos SQLite integradas de uso offline.",
+        fieldBullet2: "Aplicaciones móviles con bases de datos SQLite de uso offline.",
         fieldBullet3: "Consola de despacho interactiva con asignación de tareas en calendarios dinámicos.",
         fieldBullet4: "Notificaciones automáticas a clientes mediante mensajes de texto (SMS) y correo electrónico.",
         stratTitle: "Estrategia Tecnológica y Consultoría de Arquitectura",
@@ -803,14 +844,14 @@ const translations = {
         stratBullet1: "Planes de migración de sistemas monolíticos a microservicios y serverless.",
         stratBullet2: "Optimización de costos en nubes múltiples (AWS, GCP, Azure).",
         stratBullet3: "Planes de recuperación ante desastres y políticas de respaldo de bases de datos.",
-        stratBullet4: "Talleres de preparación de IA y evaluación de proveedores de tecnología.",
-        testTitle: "Plataforma integral de comercio electrónico en la nube",
-        testDesc1: "La fiabilidad es esencial para mantener la confianza de los clientes. Yelagiri Infotech ofrece soluciones de e‑commerce personalizadas que unifican catálogos de productos, agilizan las cadenas de suministro y coordinan los flujos de trabajo de los clientes.",
-        testDesc2: "Nuestras plataformas están diseñadas para un alto volumen transaccional, garantizando marketplaces rápidos, seguros y escalables incluso bajo gran demanda.",
-        testBullet1: "Gestión centralizada de productos e inventarios.",
-        testBullet2: "Herramientas integradas de pago y auditoría financiera.",
-        testBullet3: "Interacción y personalización en tiempo real con clientes.",
-        testBullet4: "Escalado de marketplaces con despliegue CI/CD sin fricciones",
+        stratBullet4: "Ateliers de preparación de IA y evaluación de proveedores de tecnología.",
+        testTitle: "Motores de Comercio Electrónico Escalables",
+        testDesc1: "Desarrollamos motores de comercio electrónico personalizados de alto rendimiento, preparados para soportar picos transaccionales de temporada y facilitar compras sin fricciones. Desacoplamos interfaces front-end de back-end para mayor seguridad.",
+        testDesc2: "Desde portales multi-tienda hasta pasarelas de pago a medida, integramos procesamiento seguro de compras, algoritmos de cálculo de impuestos automáticos, inventario en tiempo real y recomendaciones predictivas.",
+        testBullet1: "Procesamiento seguro de carrito de compras y pasarelas multidivisa.",
+        testBullet2: "Arquitectura de comercio desacoplado (headless) con APIs GraphQL.",
+        testBullet3: "Sincronización de inventario multi-almacén en tiempo real.",
+        testBullet4: "Recomendaciones de productos con IA y seguimiento de carritos.",
         llmTitle: "Despliegue de LLM Privados e Ingeniería de Agentes de IA",
         llmDesc1: "Creamos herramientas de procesamiento de lenguaje natural conectadas a la información interna de su organización, superando los chats tradicionales genéricos. Estructuramos motores RAG para búsquedas de información sin errores ni alucinaciones.",
         llmDesc2: "Mediante el uso de bases de datos vectoriales (Pinecone, Milvus, PGVector) y modelos open-source (Llama-3, Mistral, Qwen) alojados localmente o en su nube privada, la información comercial nunca sale de su control. Diseñamos agentes de IA autónomos.",
@@ -848,7 +889,7 @@ const translations = {
 
         // ABOUT PAGE (about.html)
         aboutHeadBadge: "Nuestra Identidad",
-        aboutHeadTitle: "Yelagiri Infotech",
+        aboutHeadTitle: "Yelagiri Infotech (OPC)",
         aboutHeadDesc: "Construyendo arquitecturas de software robustas y personalizadas para respaldar el crecimiento empresarial.",
         aboutMissionTitle: "Nuestra Misión: Transformar las Empresas mediante la IA y la Excelencia Técnica",
         aboutMissionDesc1: "Fundada con la convicción de que el software debe ser tratado como un activo principal de la empresa y no como un gasto temporal, Yelagiri Infotech desarrolla soluciones de software de alta calidad. Ayudamos a las empresas a modernizar sus sistemas e integrar inteligencia artificial en entornos seguros.",
@@ -881,8 +922,10 @@ const translations = {
         contactSideItemTitle1: "Contacto Corporativo",
         contactSideItemTitle2: "Respuesta SLA Garantizada",
         contactSideItemDesc2: "Todas las solicitudes de consultoría corporativa reciben respuesta por parte de un ingeniero principal en menos de 2 horas.",
-        contactSideItemTitle3: "Centro de Desarrollo",
-        contactSideItemDesc3: "Yelagiri Infotech Software Parks, Distrito de Vellore, Tamil Nadu, India",
+        contactSideItemTitle3: "Oficina registrada",
+        contactSideItemDesc3: "Yelagiri Infotech (OPC). SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, India.",
+        contactSideItemTitle4: "Sucursal",
+        contactSideItemDesc4: "NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011",
         labelName: "Su Nombre *",
         labelEmail: "Correo Electrónico Comercial *",
         labelCompany: "Nombre de la Empresa",
@@ -891,7 +934,7 @@ const translations = {
         optErp: "Sistemas ERP Corporativos Cloud",
         optField: "Soluciones para Servicios de Campo",
         optStrategy: "Estrategia de TI y Consultoría",
-        optTesting: "Control de Calidad y Pruebas",
+        optTesting: "Plataformas de E-Commerce",
         optLlm: "Modelos de Lenguaje (LLM) e IA Privada",
         optOther: "Desarrollo de Software a Medida",
         labelBudget: "Presupuesto / Alcance del Proyecto",
@@ -901,7 +944,17 @@ const translations = {
         optBudget4: "Desarrollo y Soporte Plurianual (Más de $150k)",
         labelMessage: "Objetivos de Negocio y Alcance del Proyecto *",
         placeholderMessage: "Describa los problemas operativos que busca solucionar y el sector correspondiente (Ventas, Licitaciones, Servicios, Educación)...",
-        btnSubmit: "Enviar Solicitud Técnica"
+        btnSubmit: "Enviar Solicitud Técnica",
+
+        // CAREERS PAGE (careers.html [NEW])
+        careersHeadBadge: "Únete a nuestro equipo",
+        careersHeadTitle: "Diseña el Futuro de la Tecnología Empresarial",
+        careersHeadDesc: "En Yelagiri Infotech cultivamos una cultura de ingeniería enfocada en la excelencia técnica, desarrollos seguros de IA y productos escalables.",
+        careersCultureTitle: "¿Por qué Yelagiri Infotech?",
+        careersCultureDesc: "Creemos en contratar personas talentosas apasionadas por resolver problemas empresariales complejos. Ofrecemos oportunidades únicas de trabajar en desarrollos de código limpios desde cero utilizando microservicios y bases de datos vectoriales.",
+        careersApplyTitle: "Vacantes Abiertas y Cómo Postularse",
+        careersApplyDesc: "Mantenemos un proceso de reclutamiento simplificado. Todas nuestras vacantes activas y ofertas de prácticas de ingeniería de software o IA se publican exclusivamente a través de LinkedIn y los principales portales de empleo.",
+        careersApplyBtn: "Ver vacantes en LinkedIn"
     }
 };
 
@@ -910,29 +963,24 @@ function initGlobalization() {
     const langSelects = document.querySelectorAll('.lang-select');
     if (langSelects.length === 0) return;
 
-    // Detect language or pull from localStorage
     let currentLang = localStorage.getItem('selectedLanguage');
     if (!currentLang) {
-        // Fallback to browser lang if it is fr or es, else en
         const browserLang = navigator.language.slice(0, 2);
         currentLang = ['en', 'fr', 'es'].includes(browserLang) ? browserLang : 'en';
         localStorage.setItem('selectedLanguage', currentLang);
     }
 
-    // Set selectors to active language
     langSelects.forEach(select => {
         select.value = currentLang;
         
         select.addEventListener('change', (e) => {
             const selectedLang = e.target.value;
             localStorage.setItem('selectedLanguage', selectedLang);
-            // Synchronize all dropdowns
             langSelects.forEach(s => s.value = selectedLang);
             updateLanguage(selectedLang);
         });
     });
 
-    // Run first translation
     updateLanguage(currentLang);
 }
 
@@ -943,7 +991,6 @@ function updateLanguage(lang) {
         if (translations[lang] && translations[lang][key]) {
             const textValue = translations[lang][key];
 
-            // If it is an input or textarea, translate placeholder
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 if (el.type === 'submit' || el.type === 'button') {
                     el.value = textValue;
@@ -951,18 +998,15 @@ function updateLanguage(lang) {
                     el.setAttribute('placeholder', textValue);
                 }
             } else if (el.tagName === 'SELECT') {
-                // Handle select default disabled option translation
                 const defaultOpt = el.querySelector('option[disabled]');
                 if (defaultOpt) {
                     defaultOpt.text = textValue;
                 }
             } else {
-                // Normal tags: update HTML
                 el.innerHTML = textValue;
             }
         }
     });
 
-    // Toggle html lang attribute for accessibility / SEO crawler
     document.documentElement.setAttribute('lang', lang);
 }

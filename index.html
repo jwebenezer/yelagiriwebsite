@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yelagiri Infotech | Engineering Intelligence.
-Building Products That Last.</title>
+    <title>Yelagiri Infotech | Engineering Intelligence. Building Products That Last.</title>
     <meta name="description" content="Yelagiri Infotech is a premium software service provider. We engineer cloud ERP, automated Field Services software, custom Large Language Models (LLM), and provide technical strategy consulting and software testing.">
     <meta name="keywords" content="Yelagiri Infotech, AI business transformation, enterprise ERP developer, Field Services Software, Technical Strategy Consulting, Software testing services, custom LLM integration, retail software, bidding system, objective education assessment">
     
@@ -27,33 +26,63 @@ Building Products That Last.</title>
     <div class="blur-orb orb-primary"></div>
     <div class="blur-orb orb-secondary"></div>
 
-    <!-- Sticky Navigation Header -->
-    <header class="header-nav" id="mainHeader">
-        <a href="index.html" class="logo" id="headerLogo">
-            <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
-        </a>
-        <nav style="display: flex; align-items: center;">
-            <ul class="nav-links" id="navLinksList">
-                <li><a href="index.html" id="navHome" class="active" data-i18n="navHome">Home</a></li>
-                <li><a href="services.html" id="navServices" data-i18n="navServices">Services</a></li>
-                <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
-                <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
-                <li><a href="contact.html" id="navContact" class="nav-cta" data-i18n="navContact">Consultation</a></li>
-            </ul>
-            <div class="lang-selector-wrapper" id="headerLangWrapper">
-                <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                </select>
+    <!-- Sticky Navigation Header Wrapper -->
+    <div class="header-nav-wrapper" id="mainHeaderWrapper">
+        <!-- Tier 1: Top Utility Bar -->
+        <div class="top-utility-bar" id="topUtilityBar">
+            <div class="utility-container">
+                <div class="utility-left" id="utilityContacts">
+                    <span>📞 +91-8667845989</span>
+                    <span class="divider">|</span>
+                    <span>✉️ info@yelagiriinfotech.com</span>
+                </div>
+                <div class="utility-right" id="utilityActions">
+                    <a href="about.html#careers" id="utilityCareers" data-i18n="navCareers">Careers</a>
+                    <span class="divider">|</span>
+                    <div class="lang-selector-wrapper" id="headerLangWrapper">
+                        <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                            <option value="es">ES</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
-    </header>
+        <!-- Tier 2: Main Navigation Bar -->
+        <div class="main-nav-bar" id="mainNavBar">
+            <div class="nav-container">
+                <a href="index.html" class="logo" id="headerLogo">
+                    <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
+                </a>
+                <nav class="nav-menu" id="mainNavMenu">
+                    <ul class="nav-links" id="navLinksList">
+                        <li><a href="index.html" id="navHome" class="active" data-i18n="navHome">Home</a></li>
+                        <li class="has-dropdown" id="navServicesDropdown">
+                            <a href="services.html" id="navServices" data-i18n="navServices">Services <span class="chevron">▼</span></a>
+                            <ul class="dropdown-menu" id="servicesDropdownMenu">
+                                <li><a href="services.html?tab=tab-erp" data-i18n="optErp">Enterprise ERP Systems</a></li>
+                                <li><a href="services.html?tab=tab-field" data-i18n="optField">Field Services Software</a></li>
+                                <li><a href="services.html?tab=tab-strategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
+                                <li><a href="services.html?tab=tab-testing" data-i18n="optTesting">E-Commerce Platforms</a></li>
+                                <li><a href="services.html?tab=tab-llm" data-i18n="optLlm">LLM & Generative AI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
+                        <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions" id="navActionsWrapper">
+                    <a href="contact.html" class="btn-nav-cta" id="navContact" data-i18n="navContact">Consultation</a>
+                    <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -65,8 +94,7 @@ Building Products That Last.</title>
                             <span class="badge-pulse"></span>
                             <span data-i18n="heroBadge">Next-Gen Enterprise Architecture</span>
                         </div>
-                        <h1 class="hero-title gradient-text" data-i18n="heroTitle"> Engineering Intelligence.
-Building Products That Last.</h1>
+                        <h1 class="hero-title gradient-text" data-i18n="heroTitle">Engineering Intelligence. Building Products That Last.</h1>
                         <p class="hero-desc" data-i18n="heroDesc">
                             At Yelagiri Infotech, we build custom cloud solutions that solve complex operations. We deliver next-generation ecommerce systems, automated Field Services software, robust SAAS products, specialized mobile apps and tailored Large Language Model integrations to prepare your business for the cognitive era.
                         </p>
@@ -78,8 +106,8 @@ Building Products That Last.</h1>
                     <div class="hero-visual">
                         <div class="hero-glow-ring"></div>
                         <div class="hero-glow-ring-2"></div>
-                       <!-- <div class="image-container" id="heroImgWrapper"> 
-                            <img src="assets/hero_tech_ai.png" alt="Yelagiri Infotech AI and enterprise software architecture visual representation" id="heroImg"> </div> -->
+                        <!-- <div class="image-container" id="heroImgWrapper"> 
+                            <img src="/assets/hero_tech_ai.png" alt="Yelagiri Infotech AI and enterprise software architecture visual representation" id="heroImg"> </div> -->
                         </div>
                     </div>
                 </div>
@@ -166,7 +194,7 @@ Building Products That Last.</h1>
                         <div class="card-icon">⚙️</div>
                         <h3 class="card-title" data-i18n="servCardTitle1">Cloud ERP Systems</h3>
                         <p class="card-desc" data-i18n="servCardDesc1">Bespoke Enterprise Resource Planning software developed to centralize supply chains, financial auditing, inventory pools, and personnel workflows. Built for massive transactional throughput.</p>
-                        <a href="services.html?tab=tab-testing" class="card-link" id="linkCardERP"><span data-i18n="servCardLink1">Learn More</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <a href="services.html?tab=tab-erp" class="card-link" id="linkCardERP"><span data-i18n="servCardLink1">Learn More</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                     </div>
 
                     <div class="glass-card" id="cardFieldServices">
@@ -201,13 +229,13 @@ Building Products That Last.</h1>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Whitespace Truncated and Compact Address Layouts) -->
     <footer class="footer" id="mainFooter">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo-desc">
                     <a href="index.html" class="logo" id="footerLogo">
-                        <img src="/assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="footerLogoImg">
+                        <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="footerLogoImg">
                     </a>
                     <p class="footer-desc" data-i18n="footerDesc">
                         Providing premier custom software development, IT consulting, and secure AI engineering services. Helping enterprise organizations scale securely with technical excellence.
@@ -219,7 +247,7 @@ Building Products That Last.</h1>
                         <li><a href="services.html?tab=tab-erp" id="fLinkERP" data-i18n="optErp">Enterprise ERP Systems</a></li>
                         <li><a href="services.html?tab=tab-field" id="fLinkField" data-i18n="optField">Field Services Software</a></li>
                         <li><a href="services.html?tab=tab-strategy" id="fLinkStrategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
-                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platform</a></li>
+                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platforms</a></li>
                         <li><a href="services.html?tab=tab-llm" id="fLinkLlm" data-i18n="optLlm">LLM & Generative AI</a></li>
                     </ul>
                 </div>
@@ -233,16 +261,24 @@ Building Products That Last.</h1>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="footer-title" data-i18n="footerNewsletterTitle">Stay Updated</h3>
-                    <p class="footer-newsletter-p" data-i18n="footerNewsletterP">Subscribe to our newsletter for insights on IT strategy and AI engineering trends.</p>
-                    <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Yelagiri Infotech insights!'); this.reset();">
-                        <input type="email" class="newsletter-input" data-i18n="footerNewsletterPlaceholder" placeholder="Enter business email" required aria-label="Business email address">
-                        <button type="submit" class="newsletter-btn" id="newsletterSubmit" data-i18n="footerNewsletterBtn">Join</button>
-                    </form>
+                    <h3 class="footer-title">Contact & Locations</h3>
+                    <ul class="footer-links" id="footerContactInfo" style="font-size: 0.88rem; line-height: 1.5; color: var(--text-muted); list-style: none;">
+                        <li style="margin-bottom: 0.6rem;">
+                            <strong style="color: var(--text-dark);" data-i18n="addressRegisteredLabel">Registered Office:</strong><br>
+                            Yelagiri Infotech (OPC)<br>
+                            SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, India.
+                        </li>
+                        <li style="margin-bottom: 0.6rem;">
+                            <strong style="color: var(--text-dark);" data-i18n="addressBranchLabel">Branch Office:</strong><br>
+                            NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011
+                        </li>
+                        <li style="margin-top: 0.4rem;">📞 +91-8667845989</li>
+                        <li>✉️ info@yelagiriinfotech.com</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech. All rights reserved. Built with technical excellence.</p>
+                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech (OPC). All rights reserved. Built with technical excellence.</p>
                 <div class="social-links">
                     <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="socLinkedin" aria-label="Yelagiri Infotech LinkedIn profile">in</a>
                     <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="socGithub" aria-label="Yelagiri Infotech GitHub workspace">git</a>

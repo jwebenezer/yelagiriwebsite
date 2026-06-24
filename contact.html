@@ -24,37 +24,67 @@
     <div class="blur-orb orb-primary"></div>
     <div class="blur-orb orb-secondary"></div>
 
-    <!-- Sticky Navigation Header -->
-    <header class="header-nav" id="mainHeader">
-        <a href="index.html" class="logo" id="headerLogo">
-            <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
-        </a>
-        <nav style="display: flex; align-items: center;">
-            <ul class="nav-links" id="navLinksList">
-                <li><a href="index.html" id="navHome" data-i18n="navHome">Home</a></li>
-                <li><a href="services.html" id="navServices" data-i18n="navServices">Services</a></li>
-                <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
-                <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
-                <li><a href="contact.html" id="navContact" class="nav-cta active" data-i18n="navContact">Consultation</a></li>
-            </ul>
-            <div class="lang-selector-wrapper" id="headerLangWrapper">
-                <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                </select>
+    <!-- Sticky Navigation Header Wrapper -->
+    <div class="header-nav-wrapper" id="mainHeaderWrapper">
+        <!-- Tier 1: Top Utility Bar -->
+        <div class="top-utility-bar" id="topUtilityBar">
+            <div class="utility-container">
+                <div class="utility-left" id="utilityContacts">
+                    <span>📞 +91-8667845989</span>
+                    <span class="divider">|</span>
+                    <span>✉️ info@yelagiriinfotech.com</span>
+                </div>
+                <div class="utility-right" id="utilityActions">
+                    <a href="about.html#careers" id="utilityCareers" data-i18n="navCareers">Careers</a>
+                    <span class="divider">|</span>
+                    <div class="lang-selector-wrapper" id="headerLangWrapper">
+                        <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                            <option value="es">ES</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
-    </header>
+        <!-- Tier 2: Main Navigation Bar -->
+        <div class="main-nav-bar" id="mainNavBar">
+            <div class="nav-container">
+                <a href="index.html" class="logo" id="headerLogo">
+                    <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
+                </a>
+                <nav class="nav-menu" id="mainNavMenu">
+                    <ul class="nav-links" id="navLinksList">
+                        <li><a href="index.html" id="navHome" data-i18n="navHome">Home</a></li>
+                        <li class="has-dropdown" id="navServicesDropdown">
+                            <a href="services.html" id="navServices" data-i18n="navServices">Services <span class="chevron">▼</span></a>
+                            <ul class="dropdown-menu" id="servicesDropdownMenu">
+                                <li><a href="services.html?tab=tab-erp" data-i18n="optErp">Enterprise ERP Systems</a></li>
+                                <li><a href="services.html?tab=tab-field" data-i18n="optField">Field Services Software</a></li>
+                                <li><a href="services.html?tab=tab-strategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
+                                <li><a href="services.html?tab=tab-testing" data-i18n="optTesting">E-Commerce Platforms</a></li>
+                                <li><a href="services.html?tab=tab-llm" data-i18n="optLlm">LLM & Generative AI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
+                        <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions" id="navActionsWrapper">
+                    <a href="contact.html" class="btn-nav-cta active" id="navContact" data-i18n="navContact">Consultation</a>
+                    <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Page Header -->
-        <section class="section" style="padding-top: 140px; padding-bottom: 40px;">
+        <section class="section" style="padding-top: 150px; padding-bottom: 40px;">
             <div class="container">
                 <div class="section-header">
                     <div class="badge" id="contactBadge" data-i18n="contactHeadBadge">Collaborate</div>
@@ -82,7 +112,7 @@
                             <div class="contact-icon">✉️</div>
                             <div class="contact-details">
                                 <h4 data-i18n="contactSideItemTitle1">Corporate Inquiry</h4>
-                                <p><a href="mailto:architects@yelagiriinfotech.com" style="color: var(--color-primary); text-decoration: none;">architects@yelagiriinfotech.com</a></p>
+                                <p><a href="mailto:info@yelagiriinfotech.com" style="color: var(--color-primary); text-decoration: none;">info@yelagiriinfotech.com</a></p>
                             </div>
                         </div>
 
@@ -97,8 +127,16 @@
                         <div class="contact-item">
                             <div class="contact-icon">📍</div>
                             <div class="contact-details">
-                                <h4 data-i18n="contactSideItemTitle3">Engineering Center</h4>
-                                <p data-i18n="contactSideItemDesc3">Yelagiri Infotech Software Parks, Vellore District, Tamil Nadu, India</p>
+                                <h4 data-i18n="contactSideItemTitle3">Registered Office</h4>
+                                <p data-i18n="contactSideItemDesc3">Yelagiri Infotech (OPC). SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, India.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contactSideItemTitle4">Branch Office</h4>
+                                <p data-i18n="contactSideItemDesc4">NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +168,7 @@
                                         <option value="erp" data-i18n="optErp">Enterprise Cloud ERP Systems</option>
                                         <option value="field" data-i18n="optField">Field Services Sync Solutions</option>
                                         <option value="strategy" data-i18n="optStrategy">Technical Strategy Consulting</option>
-                                        <option value="testing" data-i18n="optTesting">Quality Assurance & Software Testing</option>
+                                        <option value="testing" data-i18n="optTesting">E-Commerce Platforms</option>
                                         <option value="llm" data-i18n="optLlm">Custom LLM & Private AI Engines</option>
                                         <option value="other" data-i18n="optOther">Bespoke Software Engineering</option>
                                     </select>
@@ -152,7 +190,7 @@
                                 <textarea id="message" class="form-control" data-i18n="placeholderMessage" placeholder="Describe the operational bottlenecks you are looking to solve and your target domain (Retail, Bidding, Field Services, Education)..." required></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none;" id="btnSubmitContact" data-i18n="btnSubmit">Submit Strategy Request</button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none;" id="btnSubmitContact" data-i18n="btnSubmit">Submit Project Request</button>
 
                             <!-- Success/Error Feedback Container -->
                             <div class="form-feedback" id="formFeedback"></div>
@@ -182,7 +220,7 @@
                         <li><a href="services.html?tab=tab-erp" id="fLinkERP" data-i18n="optErp">Enterprise ERP Systems</a></li>
                         <li><a href="services.html?tab=tab-field" id="fLinkField" data-i18n="optField">Field Services Software</a></li>
                         <li><a href="services.html?tab=tab-strategy" id="fLinkStrategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
-                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platform</a></li>
+                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platforms</a></li>
                         <li><a href="services.html?tab=tab-llm" id="fLinkLlm" data-i18n="optLlm">LLM & Generative AI</a></li>
                     </ul>
                 </div>
@@ -196,16 +234,24 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="footer-title" data-i18n="footerNewsletterTitle">Stay Updated</h3>
-                    <p class="footer-newsletter-p" data-i18n="footerNewsletterP">Subscribe to our newsletter for insights on IT strategy and AI engineering trends.</p>
-                    <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Yelagiri Infotech insights!'); this.reset();">
-                        <input type="email" class="newsletter-input" data-i18n="footerNewsletterPlaceholder" placeholder="Enter business email" required aria-label="Business email address">
-                        <button type="submit" class="newsletter-btn" id="newsletterSubmit" data-i18n="footerNewsletterBtn">Join</button>
-                    </form>
+                    <h3 class="footer-title">Contact & Locations</h3>
+                    <ul class="footer-links" id="footerContactInfo" style="font-size: 0.88rem; line-height: 1.5; color: var(--text-muted); list-style: none;">
+                        <li style="margin-bottom: 0.6rem;">
+                            <strong style="color: var(--text-dark);" data-i18n="addressRegisteredLabel">Registered Office:</strong><br>
+                            Yelagiri Infotech (OPC)<br>
+                            SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, India.
+                        </li>
+                        <li style="margin-bottom: 0.6rem;">
+                            <strong style="color: var(--text-dark);" data-i18n="addressBranchLabel">Branch Office:</strong><br>
+                            NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011
+                        </li>
+                        <li style="margin-top: 0.4rem;">📞 +91-8667845989</li>
+                        <li>✉️ info@yelagiriinfotech.com</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech. All rights reserved. Built with technical excellence.</p>
+                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech (OPC). All rights reserved. Built with technical excellence.</p>
                 <div class="social-links">
                     <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="socLinkedin" aria-label="Yelagiri Infotech LinkedIn profile">in</a>
                     <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="socGithub" aria-label="Yelagiri Infotech GitHub workspace">git</a>

@@ -24,37 +24,67 @@
     <div class="blur-orb orb-primary"></div>
     <div class="blur-orb orb-secondary"></div>
 
-    <!-- Sticky Navigation Header -->
-    <header class="header-nav" id="mainHeader">
-        <a href="index.html" class="logo" id="headerLogo">
-            <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
-        </a>
-        <nav style="display: flex; align-items: center;">
-            <ul class="nav-links" id="navLinksList">
-                <li><a href="index.html" id="navHome" data-i18n="navHome">Home</a></li>
-                <li><a href="services.html" id="navServices" class="active" data-i18n="navServices">Services</a></li>
-                <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
-                <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
-                <li><a href="contact.html" id="navContact" class="nav-cta" data-i18n="navContact">Consultation</a></li>
-            </ul>
-            <div class="lang-selector-wrapper" id="headerLangWrapper">
-                <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                </select>
+    <!-- Sticky Navigation Header Wrapper -->
+    <div class="header-nav-wrapper" id="mainHeaderWrapper">
+        <!-- Tier 1: Top Utility Bar -->
+        <div class="top-utility-bar" id="topUtilityBar">
+            <div class="utility-container">
+                <div class="utility-left" id="utilityContacts">
+                    <span>📞 +91-8667845989</span>
+                    <span class="divider">|</span>
+                    <span>✉️ info@yelagiriinfotech.com</span>
+                </div>
+                <div class="utility-right" id="utilityActions">
+                    <a href="about.html#careers" id="utilityCareers" data-i18n="navCareers">Careers</a>
+                    <span class="divider">|</span>
+                    <div class="lang-selector-wrapper" id="headerLangWrapper">
+                        <select class="lang-select" aria-label="Language selector" id="headerLangSelect">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                            <option value="es">ES</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
-    </header>
+        <!-- Tier 2: Main Navigation Bar -->
+        <div class="main-nav-bar" id="mainNavBar">
+            <div class="nav-container">
+                <a href="index.html" class="logo" id="headerLogo">
+                    <img src="assets/yelagiri-infotech-logo.png" alt="Yelagiri Infotech logo image" class="logo-img" id="headerLogoImg">
+                </a>
+                <nav class="nav-menu" id="mainNavMenu">
+                    <ul class="nav-links" id="navLinksList">
+                        <li><a href="index.html" id="navHome" data-i18n="navHome">Home</a></li>
+                        <li class="has-dropdown" id="navServicesDropdown">
+                            <a href="services.html" id="navServices" class="active" data-i18n="navServices">Services <span class="chevron">▼</span></a>
+                            <ul class="dropdown-menu" id="servicesDropdownMenu">
+                                <li><a href="services.html?tab=tab-erp" data-i18n="optErp">Enterprise ERP Systems</a></li>
+                                <li><a href="services.html?tab=tab-field" data-i18n="optField">Field Services Software</a></li>
+                                <li><a href="services.html?tab=tab-strategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
+                                <li><a href="services.html?tab=tab-testing" data-i18n="optTesting">E-Commerce Platforms</a></li>
+                                <li><a href="services.html?tab=tab-llm" data-i18n="optLlm">LLM & Generative AI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="domains.html" id="navDomains" data-i18n="navDomains">Domains</a></li>
+                        <li><a href="about.html" id="navAbout" data-i18n="navAbout">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions" id="navActionsWrapper">
+                    <a href="contact.html" class="btn-nav-cta" id="navContact" data-i18n="navContact">Consultation</a>
+                    <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Page Header -->
-        <section class="section" style="padding-top: 140px; padding-bottom: 40px;">
+        <section class="section" style="padding-top: 150px; padding-bottom: 40px;">
             <div class="container">
                 <div class="section-header">
                     <div class="badge" id="servicesBadge" data-i18n="servicesHeadBadge">Capabilities Matrix</div>
@@ -74,7 +104,7 @@
                         <li><button class="tab-btn active" data-tab="tab-erp" id="btnTabErp" data-i18n="tabErpBtn">Enterprise ERP</button></li>
                         <li><button class="tab-btn" data-tab="tab-field" id="btnTabField" data-i18n="tabFieldBtn">Field Services</button></li>
                         <li><button class="tab-btn" data-tab="tab-strategy" id="btnTabStrategy" data-i18n="tabStrategyBtn">Tech Strategy</button></li>
-                        <li><button class="tab-btn" data-tab="tab-testing" id="btnTabTesting" data-i18n="tabTestingBtn">Software Testing</button></li>
+                        <li><button class="tab-btn" data-tab="tab-testing" id="btnTabTesting" data-i18n="tabTestingBtn">E-Commerce Platforms</button></li>
                         <li><button class="tab-btn" data-tab="tab-llm" id="btnTabLlm" data-i18n="tabLlmBtn">LLM & Generative AI</button></li>
                     </ul>
 
@@ -153,26 +183,26 @@
                             </div>
                         </div>
 
-                        <!-- TAB: SOFTWARE TESTING -->
+                        <!-- TAB: E-COMMERCE -->
                         <div class="tab-content" id="tab-testing">
                             <div class="tab-content-text">
-                                <h2 class="gradient-text" style="font-size: 2.2rem; margin-bottom: 1.2rem;" data-i18n="testTitle">Comprehensive Quality Assurance & Software Testing</h2>
+                                <h2 class="gradient-text" style="font-size: 2.2rem; margin-bottom: 1.2rem;" data-i18n="testTitle">Scalable E-Commerce & Retail Engine Platforms</h2>
                                 <p style="margin-bottom: 1.2rem;" data-i18n="testDesc1">
-                                    Reliability is essential for keeping client trust. Yelagiri Infotech applies strict software testing frameworks across every layer of your application. We design and execute automated test suites that run continuously during code builds to catch issues before deployment.
+                                    We engineer customized, high-performance E-Commerce engines built to sustain massive seasonal traffic spikes and facilitate frictionless buying journeys. Our systems decouple frontend interfaces from backend processes for increased security and agility.
                                 </p>
                                 <p style="margin-bottom: 1.2rem;" data-i18n="testDesc2">
-                                    Our QA capability covers end-to-end user path simulation, API contract verification, and rigorous performance testing (load, spike, and soak testing). We verify that your platforms remain fast, secure, and fully functional under heavy usage.
+                                    From multi-vendor shopping portals to custom merchant integrations, we embed secure checkout processing, automated taxation algorithms, real-time inventory pooling, and predictive recommendations to increase conversion metrics.
                                 </p>
                                 <ul class="service-bullets" id="listTestingCapabilities">
-                                    <li data-i18n="testBullet1">Continuous CI/CD integration with automated testing tools.</li>
-                                    <li data-i18n="testBullet2">Load and stress profiling to identify scale ceilings.</li>
-                                    <li data-i18n="testBullet3">API contract validation and automated security vulnerability checks.</li>
-                                    <li data-i18n="testBullet4">Real-device mobile and browser layout verification testing.</li>
+                                    <li data-i18n="testBullet1">Custom shopping cart checkout and secure multi-currency payments.</li>
+                                    <li data-i18n="testBullet2">Headless commerce architecture with GraphQL APIs.</li>
+                                    <li data-i18n="testBullet3">Real-time multi-warehouse inventory reconciliation.</li>
+                                    <li data-i18n="testBullet4">AI-powered product recommendations and user cart tracking.</li>
                                 </ul>
                             </div>
                             <div class="tab-content-visual">
                                 <div class="image-container" style="max-width: 100%;">
-                                    <img src="assets/services_concepts.png" alt="Automated software testing pipelines and QA checks diagram" id="imgTabTesting">
+                                    <img src="assets/services_concepts.png" alt="Automated E-Commerce checkout pipeline flow mockups" id="imgTabTesting">
                                 </div>
                             </div>
                         </div>
@@ -238,7 +268,7 @@
                         <li><a href="services.html?tab=tab-erp" id="fLinkERP" data-i18n="optErp">Enterprise ERP Systems</a></li>
                         <li><a href="services.html?tab=tab-field" id="fLinkField" data-i18n="optField">Field Services Software</a></li>
                         <li><a href="services.html?tab=tab-strategy" id="fLinkStrategy" data-i18n="optStrategy">Tech Strategy Consulting</a></li>
-                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platform</a></li>
+                        <li><a href="services.html?tab=tab-testing" id="fLinkTesting" data-i18n="optTesting">E-Commerce Platforms</a></li>
                         <li><a href="services.html?tab=tab-llm" id="fLinkLlm" data-i18n="optLlm">LLM & Generative AI</a></li>
                     </ul>
                 </div>
@@ -252,16 +282,24 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="footer-title" data-i18n="footerNewsletterTitle">Stay Updated</h3>
-                    <p class="footer-newsletter-p" data-i18n="footerNewsletterP">Subscribe to our newsletter for insights on IT strategy and AI engineering trends.</p>
-                    <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Yelagiri Infotech insights!'); this.reset();">
-                        <input type="email" class="newsletter-input" data-i18n="footerNewsletterPlaceholder" placeholder="Enter business email" required aria-label="Business email address">
-                        <button type="submit" class="newsletter-btn" id="newsletterSubmit" data-i18n="footerNewsletterBtn">Join</button>
-                    </form>
+                    <h3 class="footer-title">Contact & Locations</h3>
+                    <ul class="footer-links" id="footerContactInfo" style="font-size: 0.88rem; line-height: 1.5; color: var(--text-muted); list-style: none;">
+                        <li style="margin-bottom: 0.6rem;">
+                            <strong style="color: var(--text-dark);" data-i18n="addressRegisteredLabel">Registered Office:</strong><br>
+                            Yelagiri Infotech (OPC)<br>
+                            SP-7A Guindy Industrial Estate SIDCO, Chennai - 600032, Tamil Nadu, India.
+                        </li>
+                        <li style="margin-bottom: 0.6rem;">
+                            <strong style="color: var(--text-dark);" data-i18n="addressBranchLabel">Branch Office:</strong><br>
+                            NO 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu 641011
+                        </li>
+                        <li style="margin-top: 0.4rem;">📞 +91-8667845989</li>
+                        <li>✉️ info@yelagiriinfotech.com</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech. All rights reserved. Built with technical excellence.</p>
+                <p data-i18n="footerCopyright">&copy; 2026 Yelagiri Infotech (OPC). All rights reserved. Built with technical excellence.</p>
                 <div class="social-links">
                     <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="socLinkedin" aria-label="Yelagiri Infotech LinkedIn profile">in</a>
                     <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="socGithub" aria-label="Yelagiri Infotech GitHub workspace">git</a>
